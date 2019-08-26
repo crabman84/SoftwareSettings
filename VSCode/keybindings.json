@@ -1,0 +1,107 @@
+// Place your key bindings in this file to override the defaultsauto[]
+[
+
+    {
+        "key": "ctrl+k ctrl+c",
+        "command": "-editor.action.addCommentLine",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+
+    {
+        "key": "ctrl+k ctrl+u",
+        "command": "-editor.action.removeCommentLine",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    //Create comment block over current line or highlighted area
+    {
+        "key": "ctrl+shift+x",
+        "command": "editor.action.addCommentLine",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "ctrl+shift+y",
+        "command": "editor.action.removeCommentLine",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    //Close current file VS is focused on
+    {
+        "key": "ctrl+w",
+        "command": "workbench.action.closeActiveEditor",
+    },
+    //Split editor into two windows using copying over focused File to new Window(Does not create a new copy of the file in directory)
+    {
+        "key": "alt+s",
+        "command": "workbench.action.splitEditor",
+    },
+
+    //Switching between editor and terminal
+    {
+        "key": "alt+q",
+        "command": "workbench.action.terminal.focus",
+    },
+    {
+        "key": "alt+q",
+        "command": "workbench.action.focusActiveEditorGroup",
+        "when": "terminalFocus"
+    },
+    //Switching between terminals in VS code
+    {
+        "key": "shift+alt+w",
+        "command": "workbench.action.terminal.focusNext"
+    },
+    {
+        "key": "shift+alt+e",
+        "command": "workbench.action.terminal.focusPrevious"
+    },
+    //Switching between split terminals in a single terminal window in VS code
+    
+    {
+        "key": "shift+alt+q",
+        "command": "workbench.action.terminal.focusNextPane",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "shift+alt+2",
+        "command": "workbench.action.terminal.focusPreviousPane",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "ctrl+f",
+        "command": "-workbench.action.terminal.focusFindWidget",
+        "when": "terminalFindWidgetFocused"
+    },
+    // Saving code manually
+    {
+        "key": "shift+alt+s",
+        "command": "workbench.action.files.saveAs"
+    },
+    {
+        "key": "ctrl+shift+s",
+        "command": "-workbench.action.files.saveAs"
+    },
+    //Switching between adjacent files that are open in vs Code
+    {
+        "key": "ctrl+tab",
+        "command": "workbench.action.nextEditor"
+    },
+    {
+        "key": "ctrl+shift+tab",
+        "command": "workbench.action.previousEditor"
+    },
+    //Intellisense Keybindings
+    {
+        "key": "ctrl+space",
+        "command": "editor.action.triggerSuggest",
+        "when": "editorHasCompletionItemProvider && editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "ctrl+space",
+        "command": "toggleSuggestionDetails",
+        "when": "editorTextFocus && suggestWidgetVisible"
+    },
+    {
+        "key": "ctrl+alt+space",
+        "command": "toggleSuggestionFocus",
+        "when": "editorTextFocus && suggestWidgetVisible"
+    }
+]
